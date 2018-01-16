@@ -1,0 +1,24 @@
+All you need to do is to import the unity package and drag the "Pool" prefab into you scene!
+Now you can use the EventManager from anywhere as follows:
+
+-----------------------------------------------------------
+
+Don't forget including the Pool namespace:
+using Pool;
+
+Simple example (no arguments):
+EventPool.OptIn(evtName, Callback) - Register your Listener
+EventPool.OptOut(evtName, Callback) - Unregister your Listener
+EventPool.Trigger(evtName) - Trigger your Event
+
+Up to 3 arguments:
+EventPool.OptIn<type1, ...>(evtName, Callback) - Register your Listener
+EventPool.OptOut<type1, ...>(evtName, Callback) - Unregister your Listener
+EventPool.Trigger<type1, ...>(evtName, arg1, ...) - Trigger your Event
+
+Information Pulling:
+InfoPool.Request<returnType>(evtName);
+InfoPool.Provide<returnType>(evtName, Callback);
+InfoPool.Unprovide<returnType>(evtName, Callback);
+
+See also the videos on the Unity Asset Store entry and the Example script.
